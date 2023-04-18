@@ -16,15 +16,3 @@ class QuizApp extends StatelessWidget {
     );
   }
 }
-
-// First option code
-/* class QuizApp extends MaterialApp {
-  QuizApp({super.key})
-      : super(
-          home: const HomePage(),
-          theme: ThemeData(
-            useMaterial3: true,
-            colorSchemeSeed: Colors.deepPurple,
-          ),
-        );
-} */
