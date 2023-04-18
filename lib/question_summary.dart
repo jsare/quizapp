@@ -15,16 +15,15 @@ class QuestionSummary extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: summaryData.map(
             (data) {
-              final Color boolAnswer =
-                  data['correct_answer'] == data['user_answer']
-                      ? Colors.blue
-                      : Colors.purpleAccent;
+              final bool correctAnswer =
+                  data['correct_answer'] == data['user_answer'];
               return Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CircleAvatar(
                     radius: 16,
-                    backgroundColor: boolAnswer,
+                    backgroundColor:
+                        correctAnswer ? Colors.blue : Colors.purpleAccent,
                     child: Text(
                       ((data['question_index'] as int) + 1).toString(),
                       textAlign: TextAlign.center,
